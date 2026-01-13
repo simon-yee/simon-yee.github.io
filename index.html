@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Simon Yee — IT professional & writer in Vancouver, B.C." />
+  <meta name="robots" content="index,follow" />
+  <title>Simon Yee</title>
+
+  <!-- Open Graph (nice previews when you share the link) -->
+  <meta property="og:title" content="Simon Yee" />
+  <meta property="og:description" content="IT professional & writer — Vancouver, B.C." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --fg: #ececf2;
+      --muted: rgba(236,236,242,.72);
+      --faint: rgba(236,236,242,.12);
+      --accent: #b7a8ff;      /* subtle royal-purple nod */
+      --accent2: #7aa7ff;     /* occasional hover shimmer */
+      --max: 780px;
+      --radius: 14px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg: #ffffff;
+        --fg: #101217;
+        --muted: rgba(16,18,23,.64);
+        --faint: rgba(16,18,23,.12);
+        --accent: #4b35ff;
+        --accent2: #0b76ff;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      background: radial-gradient(1000px 600px at 15% -10%, rgba(183,168,255,.16), transparent 60%),
+                  radial-gradient(900px 500px at 85% 0%, rgba(122,167,255,.12), transparent 55%),
+                  var(--bg);
+      color: var(--fg);
+      font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      letter-spacing: 0.2px;
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 64px 20px 56px;
+    }
+
+    header{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    h1{
+      margin: 0;
+      font-weight: 700;
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.12;
+      letter-spacing: -0.3px;
+    }
+
+    .subhead{
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .rule{
+      height: 1px;
+      background: var(--faint);
+      margin: 28px 0;
+    }
+
+    .card{
+      border: 1px solid var(--faint);
+      border-radius: var(--radius);
+      padding: 18px 18px;
+      background: rgba(255,255,255,.02);
+      backdrop-filter: blur(6px);
+    }
+
+    p{ margin: 0 0 14px 0; }
+    p:last-child{ margin-bottom: 0; }
+
+    a{
+      color: var(--fg);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: color .15s ease, border-color .15s ease;
+    }
+    a:hover{
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      margin-top: 10px;
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--faint);
+      color: var(--muted);
+      font-size: 14px;
+      transition: border-color .15s ease, color .15s ease, transform .15s ease;
+      user-select: none;
+    }
+    .pill:hover{
+      border-color: rgba(183,168,255,.55);
+      color: var(--accent2);
+      transform: translateY(-1px);
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 860px){
+      .grid{
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    h2{
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    ul{
+      margin: 0;
+      padding: 0 0 0 18px;
+      color: var(--fg);
+    }
+    li{ margin: 6px 0; color: var(--muted); }
+    li span{ color: var(--fg); }
+
+    footer{
+      margin-top: 38px;
+      color: var(--muted);
+      font-size: 13px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tiny{
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* Accessibility */
+    a:focus, .pill:focus{
+      outline: 2px solid rgba(183,168,255,.55);
+      outline-offset: 3px;
+      border-bottom-color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Simon Yee</h1>
+      <p class="subhead">IT professional • Writer • Editor • Vancouver, B.C., Canada</p>
+
+      <nav class="links" aria-label="Primary links">
+        <!-- Replace these URLs with your real ones -->
+        <!--<a class="pill" href="mailto:you@simonyee.ca" rel="me">Email</a>-->
+        <!--<a class="pill" href="https://www.linkedin.com/in/YOUR-LINKEDIN" rel="me">LinkedIn</a>-->
+        <!--<a class="pill" href="https://github.com/YOUR-GITHUB" rel="me">GitHub</a>-->
+        <!--<a class="pill" href="https://about.me/simonyee" rel="me">About.me</a>-->
+      </nav>
+    </header>
+
+    <div class="rule"></div>
+
+    <section class="card" aria-label="Intro">
+      <p>
+        I work in IT, mostly helping people untangle systems that stopped making sense somewhere along the way.
+      </p>
+      <p>
+        I’ve spent over a decade troubleshooting software, workflows and the occasional human panic and I care a lot
+        about clarity, documentation and fixes that actually stick.
+      </p>
+      <p>
+        I also write and edit, with a background in technical documentation and newsroom work. I’m interested in how
+        technology, institutions and people quietly fail and how they can work better.
+      </p>
+
+      <p class="tiny" style="margin-top:12px;">
+        Outside of work: homelabs, system hygiene, wandering and philosophical detours.
+      </p>
+    </section>
+
+    <div class="rule"></div>
+
+    <section class="grid" aria-label="Details">
+      <div class="card">
+        <h2>What I do</h2>
+        <ul>
+          <li><span>Technical support</span> & calm incident triage</li>
+          <li><span>Troubleshooting</span> across apps, devices, accounts, workflows</li>
+          <li><span>Documentation</span> that people actually use</li>
+          <li><span>Editorial work</span> — research, writing, cleanup</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Now</h2>
+        <ul>
+          <li><span>Home base:</span> Vancouver, B.C.</li>
+          <li><span>Current focus:</span> stability, simplicity and good systems</li>
+          <li><span>Principle:</span> boring fixes beat clever hacks</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <script>document.write(new Date().getFullYear())</script> Simon Yee</span>
+      <span class="tiny"></span>
+    </footer>
+  </main>
+</body>
+</html>
